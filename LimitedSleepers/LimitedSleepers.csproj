@@ -51,9 +51,6 @@
     <Reference Include="UnityEngine">
       <HintPath>lib\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="LeatherLoader">
-      <HintPath>lib\LeatherLoader.dll</HintPath>
-    </Reference>
     <Reference Include="Facepunch.ID">
       <HintPath>lib\Facepunch.ID.dll</HintPath>
     </Reference>
@@ -68,6 +65,9 @@
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
       <HintPath>lib\Google.ProtocolBuffers.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="LeatherLoader">
+      <HintPath>..\..\LeatherLoader\LeatherLoader\bin\Release\LeatherLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

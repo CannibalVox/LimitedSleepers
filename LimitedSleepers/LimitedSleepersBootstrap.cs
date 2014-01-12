@@ -28,13 +28,16 @@ namespace LimitedSleepers
 		public void Awake()
 		{
 			DontDestroyOnLoad (this.gameObject);
-			string cfgPath = Path.Combine (Path.Combine (Path.GetDirectoryName (Assembly.GetExecutingAssembly ().Location), "config"), "LimitedSleepers.cfg");
+		}
 
+		public void ReceiveLeatherConfiguration(LeatherConfig config) {
+			string cfgPath = Path.Combine (config.ConfigDirectoryPath, "LimitedSleepers.cfg");
+			
 			if (File.Exists (cfgPath)) {
 				IniParser parser = new IniParser (cfgPath);
-
+				
 				String lifeStr = parser.GetSetting ("General", "SleeperLifeInMinutes");
-
+				
 				int.TryParse (lifeStr, out this.sleeperLifeInMinutes);
 				ConsoleSystem.Log ("Config parsed- sleeper life is "+this.sleeperLifeInMinutes+" minutes.");
 			} else {
